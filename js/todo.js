@@ -3,6 +3,10 @@ if (token) {
   token = token.replace(/^"(.*)"$/, '$1'); // Remove quotes from token start/end.
 }
 
+$('#btnHide').on('click', function(event){
+  let $todoSection = $('#todo-list')
+  $todoSection.toggle('hidden')
+})
 
 var todos = document.querySelectorAll("input[type=checkbox]");
 
@@ -92,7 +96,7 @@ $('#logoutButton').on('click', function(){
     dataType: 'json',
     data: token,
     success: function(data){
-      alert("logout exitoso");
+      alert("Logout exitoso");
       window.location = './index.html'
     },
     error: function(error_msg) {
@@ -100,6 +104,8 @@ $('#logoutButton').on('click', function(){
     }
   });
 });
+
+// MY ATTEMPT FOR DELETE...  
 
 // function deleteTodos() {
 //   $.ajax({

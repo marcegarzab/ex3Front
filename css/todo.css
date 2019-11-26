@@ -92,3 +92,7 @@ input[type="text"]:focus {
   border-radius: 4px;
   border: 0px;
 }
+
+.hidden {
+  display: none;
+}
