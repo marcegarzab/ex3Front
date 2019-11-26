@@ -90,7 +90,8 @@ $('#logoutButton').on('click', function(){
     // url: 'http://localhost:3000/users',
     url: 'https://finalexam3.herokuapp.com/logout',
     headers: {
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        'Authorization': 'Bearer ' + token
     },
     method: 'POST',
     dataType: 'json',
@@ -100,7 +101,8 @@ $('#logoutButton').on('click', function(){
       window.location = './index.html'
     },
     error: function(error_msg) {
-      alert("Couldn't do it correctly :(");
+      window.location = './index.html'
+      //alert("Couldn't do it correctly :(");
     }
   });
 });
